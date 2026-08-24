@@ -220,6 +220,6 @@
             <div class="h-14.5 hidden lg:block"></div>
         @endif
 
-        <p>Allo</p>
+        <p class="text-white">Allo</p>
     </body>
 </html>
