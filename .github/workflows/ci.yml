@@ -1,5 +1,5 @@
 name: Mon premier pipeline
-  on:
+on:
   push:
 jobs:
   bonjour:
