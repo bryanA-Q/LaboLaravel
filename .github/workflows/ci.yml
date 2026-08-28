@@ -9,12 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout du code
-      - name: Setup PHP
-      - name: Intaller les dépendances
-      - name: Préparer le .env de test
-      - name: Lancer les tests
-
-      - name: Checkout du code
         uses: actions/checkout@v4
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
