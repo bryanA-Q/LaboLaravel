@@ -31,3 +31,8 @@ jobs:
         with:
           name: coverage-report
           path: reports/coverage
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test lint
+        run: ./vendor/bin/pint --test
