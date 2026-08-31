@@ -166,6 +166,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'iamcal/sql-parser' => array(
+            'pretty_version' => 'v0.7',
+            'version' => '0.7.0.0',
+            'reference' => '610392f38de49a44dab08dc1659960a29874c4b8',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../iamcal/sql-parser',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'illuminate/auth' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -616,6 +625,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'nunomaduro/larastan' => array(
+            'pretty_version' => 'v3.10.0',
+            'version' => '3.10.0.0',
+            'reference' => '2970f83398154178a739609c244577267c7ee8eb',
+            'type' => 'phpstan-extension',
+            'install_path' => __DIR__ . '/../nunomaduro/larastan',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'nunomaduro/termwind' => array(
             'pretty_version' => 'v2.4.0',
             'version' => '2.4.0.0',
@@ -651,6 +669,15 @@
             'install_path' => __DIR__ . '/../phpoption/phpoption',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'phpstan/phpstan' => array(
+            'pretty_version' => '2.2.11',
+            'version' => '2.2.11.0',
+            'reference' => '0eb899d48d9b784eee3f1b58a6c9dc79734cf811',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpstan/phpstan',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'phpunit/php-code-coverage' => array(
             'pretty_version' => '12.5.7',
@@ -809,8 +836,8 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0 || 2.0 || 3.0',
-                1 => '3.0.0',
-                2 => '1.0|2.0|3.0',
+                1 => '1.0|2.0|3.0',
+                2 => '3.0.0',
             ),
         ),
         'psr/simple-cache' => array(

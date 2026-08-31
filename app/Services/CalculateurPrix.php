@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services;
 
 class CalculateurPrix
@@ -12,10 +13,9 @@ class CalculateurPrix
     public function calculerAvecTaxe(float $prixHT, float $tauxTaxe): float
     {
         if ($tauxTaxe < 0) {
-            throw new \InvalidArgumentException("Le taux de taxe ne peut pas être négatif.");
-        }
-        else if($prixHT < 0){
-            throw new \InvalidArgumentException("Le prix ht ne peut pas être négatif");
+            throw new \InvalidArgumentException('Le taux de taxe ne peut pas être négatif.');
+        } elseif ($prixHT < 0) {
+            throw new \InvalidArgumentException('Le prix ht ne peut pas être négatif');
         }
 
         return round($prixHT * (1 + $tauxTaxe), 2);
@@ -30,10 +30,9 @@ class CalculateurPrix
     public function appliquerRemise(float $prix, float $remisePourcentage): float
     {
         if ($remisePourcentage < 0) {
-            throw new \InvalidArgumentException("La remise ne peut pas être négative.");
-        }
-        else if($prix < 0){
-            throw new \InvalidArgumentException("Le prix ne peut pas être négatif");
+            throw new \InvalidArgumentException('La remise ne peut pas être négative.');
+        } elseif ($prix < 0) {
+            throw new \InvalidArgumentException('Le prix ne peut pas être négatif');
         }
 
         $prixApresRemise = $prix - ($prix * $remisePourcentage / 100);
@@ -49,10 +48,9 @@ class CalculateurPrix
     public function respecteSeuilMinimum(float $prix, float $seuilMinimum): bool
     {
         if ($seuilMinimum < 0) {
-            throw new \InvalidArgumentException("Le seuil minimum ne peut pas être négatif.");
-        }
-        else if($prix < 0){
-            throw new \InvalidArgumentException("Le prix ne peut pas être négatif");
+            throw new \InvalidArgumentException('Le seuil minimum ne peut pas être négatif.');
+        } elseif ($prix < 0) {
+            throw new \InvalidArgumentException('Le prix ne peut pas être négatif');
         }
 
         return $prix >= $seuilMinimum;
