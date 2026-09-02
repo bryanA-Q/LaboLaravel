@@ -42,7 +42,7 @@ jobs:
 
       - name: Analyse statique PHPStan
         run: ./vendor/bin/phpstan analyse --no-progress --memory-limit=512M
-
+    # return
   tests:
     runs-on: ubuntu-latest
     needs: [ lint, analyse ]
