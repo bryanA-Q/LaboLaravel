@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,14 +12,15 @@ Route::get('/health', function () {
     try {
         DB::connection()->getPdo();
         $dbStatus = 'ok';
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         $dbStatus = 'error';
     }
     $status = $dbStatus === 'ok' ? 'ok' : 'degraded';
     $httpCode = $status === 'ok' ? 200 : 503;
+
     return response()->json([
-    'status' => $status,
-    'database' => $dbStatus,
-    'version' => config('app.version', '1.0.0'),
+        'status' => $status,
+        'database' => $dbStatus,
+        'version' => config('app.version', '1.0.0'),
     ], $httpCode);
 });

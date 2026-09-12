@@ -40,20 +40,19 @@ class CalculateurPrix
         return max(0, round($prixApresRemise, 2));
     }
 
-    // /**
-    //  * Vérifie si un prix respecte un seuil minimum.
-    //  *
-    //  * @throws \InvalidArgumentException si le seuil est négatif
-    //  */
-    // public function respecteSeuilMinimum(float $prix, float $seuilMinimum): bool
-    // {
-    //     if ($seuilMinimum < 0) {
-    //         throw new \InvalidArgumentException('Le seuil minimum ne peut pas être négatif.');
-    //     } elseif ($prix < 0) {
-    //         throw new \InvalidArgumentException('Le prix ne peut pas être négatif');
-    //     }
+    /**
+     * Vérifie si un prix respecte un seuil minimum.
+     *
+     * @throws \InvalidArgumentException si le seuil est négatif
+     */
+    public function respecteSeuilMinimum(float $prix, float $seuilMinimum): bool
+    {
+        if ($seuilMinimum < 0) {
+            throw new \InvalidArgumentException('Le seuil minimum ne peut pas être négatif.');
+        } elseif ($prix < 0) {
+            throw new \InvalidArgumentException('Le prix ne peut pas être négatif');
+        }
 
-
-    //     return $prix >= $seuilMinimum;
-    // }
+        return $prix >= $seuilMinimum;
+    }
 }
