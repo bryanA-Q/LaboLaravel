@@ -216,6 +216,8 @@
             </main>
         </div>
 
+        <p style="color: white;">Ceci est un test pour voir si le deploiement en continue fonctionne.</p>
+
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
